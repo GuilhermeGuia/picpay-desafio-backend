@@ -1,22 +1,33 @@
 ﻿using DesafioPicPay.Application.Services.User.Dto;
 using DesafioPicPay.Exception;
+using DesafioPicPay.Exception.ExceptionBase;
+
 namespace DesafioPicPay.Application.Validators.User;
 
-public class CreateUserValidation
+public class CreateUserValidation : IValidator<CreateUserInput>
 {
-    public void Validade(CreateUserInput input)
+    public List<string> Errors { get; set; } = [];
+    public void Execute(CreateUserInput input)
+    {
+        Validate(input);
+
+        if(Errors.Count > 0)
+        {
+            throw new ErrorOnValidationException(Errors);
+        }
+    }
+    public void Validate(CreateUserInput input)
     {
         if (string.IsNullOrWhiteSpace(input.NomeCompleto))
-            throw new System.Exception(ResourceMessageExceptions.NAME_EMPTY);
+            Errors.Add(ResourceMessageExceptions.NAME_EMPTY);
 
         if (string.IsNullOrWhiteSpace(input.Email))
-            throw new System.Exception(ResourceMessageExceptions.EMAIL_EMPTY);
+            Errors.Add(ResourceMessageExceptions.EMAIL_EMPTY);
 
         if (string.IsNullOrWhiteSpace(input.Cpf))
-            throw new System.Exception(ResourceMessageExceptions.CPF_EMPTY);
+            Errors.Add(ResourceMessageExceptions.CPF_EMPTY);
 
         if (string.IsNullOrWhiteSpace(input.Password))
-            throw new System.Exception(ResourceMessageExceptions.PASSWORD_EMPTY);
-
+            Errors.Add(ResourceMessageExceptions.PASSWORD_EMPTY);
     }
 }
