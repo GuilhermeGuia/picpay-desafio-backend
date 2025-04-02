@@ -1,0 +1,7 @@
+﻿namespace DesafioPicPay.Domain.Crypto;
+
+public interface IPasswordEncryptor
+{
+    string Encrypt(string password);
+    bool Verify(string password, string encryptedPassword);
+}
