@@ -29,5 +29,4 @@ public class UserController : ControllerBase
         var response = await service.Create(input);
         return Created(string.Empty, response);
     }
-
 }
