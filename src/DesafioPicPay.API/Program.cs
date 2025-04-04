@@ -1,5 +1,6 @@
 using DesafioPicPay.API.Filters;
 using DesafioPicPay.Application;
+using DesafioPicPay.Domain.Services.AuthNotify;
 using DesafioPicPay.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,11 @@ builder.Services.AddMvc(options =>
 {
     options.Filters.Add(typeof(ExceptionFilter));
     options.Filters.Add(typeof(ResponseFilter));
+});
+
+builder.Services.AddHttpClient<IAuthNotifyService, AuthNotifyService>(client =>
+{
+    client.BaseAddress = new Uri("https://util.devi.tools/api/");
 });
 
 builder.Services.AddInfrastructure(builder.Configuration);

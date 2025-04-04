@@ -1,5 +1,6 @@
 ﻿using DesafioPicPay.Domain.Crypto;
 using DesafioPicPay.Domain.Repositories;
+using DesafioPicPay.Domain.Services.AuthNotify;
 using DesafioPicPay.Infrastructure.Crypto;
 using DesafioPicPay.Infrastructure.DataAccess;
 using DesafioPicPay.Infrastructure.DataAccess.Repositories;
@@ -35,5 +36,4 @@ public static class DepedencyInjectionExtesion
         services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         services.AddScoped<IUnitOfWork, UnitOfWork>();
     }
-
 }
