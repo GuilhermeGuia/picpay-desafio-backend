@@ -153,6 +153,9 @@
   <data name="SHOPKEEPER_TRANSACTION" xml:space="preserve">
     <value>O usuario é lojista e não pode realizar transações</value>
   </data>
+  <data name="UNAUTHORIZED_TRANSACTION" xml:space="preserve">
+    <value>A transação não foi autorizada.</value>
+  </data>
   <data name="USER_NOT_FOUND" xml:space="preserve">
     <value>O usuário não foi encontrado</value>
   </data>

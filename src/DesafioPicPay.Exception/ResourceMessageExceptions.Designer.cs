@@ -169,6 +169,15 @@ namespace DesafioPicPay.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A transação não foi autorizada..
+        /// </summary>
+        public static string UNAUTHORIZED_TRANSACTION {
+            get {
+                return ResourceManager.GetString("UNAUTHORIZED_TRANSACTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O usuário não foi encontrado.
         /// </summary>
         public static string USER_NOT_FOUND {
