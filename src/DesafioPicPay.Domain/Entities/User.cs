@@ -10,4 +10,13 @@ public class User : EntityBase
     public string Cpf { get; set; } = string.Empty;
     public string Password { get; set; } = string.Empty;
     public EUserType UserType { get; set; }
+    public double Balance { get; set; } = 0;
+    public void Debit(long value)
+    {
+        Balance -= value;
+    }
+    public void Credit(long value)
+    {
+        Balance += value;
+    }
 }
