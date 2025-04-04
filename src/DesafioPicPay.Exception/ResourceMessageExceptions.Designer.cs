@@ -61,7 +61,7 @@ namespace DesafioPicPay.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O usuário ja possui uma conta..
+        ///   Looks up a localized string similar to Esta conta já existe..
         /// </summary>
         public static string ACCOUNT_EXISTS {
             get {
@@ -156,6 +156,15 @@ namespace DesafioPicPay.Exception {
         public static string PASSWORD_INVALID {
             get {
                 return ResourceManager.GetString("PASSWORD_INVALID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O usuario é lojista e não pode realizar transações.
+        /// </summary>
+        public static string SHOPKEEPER_TRANSACTION {
+            get {
+                return ResourceManager.GetString("SHOPKEEPER_TRANSACTION", resourceCulture);
             }
         }
         

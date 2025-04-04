@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ACCOUNT_EXISTS" xml:space="preserve">
-    <value>O usuário ja possui uma conta.</value>
+    <value>Esta conta já existe.</value>
   </data>
   <data name="ACCOUNT_NOT_FOUND" xml:space="preserve">
     <value>A conta não foi encontrada</value>
@@ -149,6 +149,9 @@
   </data>
   <data name="PASSWORD_INVALID" xml:space="preserve">
     <value>A senha deve conter mais de 6 caracteres.</value>
+  </data>
+  <data name="SHOPKEEPER_TRANSACTION" xml:space="preserve">
+    <value>O usuario é lojista e não pode realizar transações</value>
   </data>
   <data name="USER_NOT_FOUND" xml:space="preserve">
     <value>O usuário não foi encontrado</value>
