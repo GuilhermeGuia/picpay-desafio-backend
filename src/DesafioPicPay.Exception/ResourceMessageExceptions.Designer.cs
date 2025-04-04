@@ -124,6 +124,15 @@ namespace DesafioPicPay.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Erro ao realizar a transferência.
+        /// </summary>
+        public static string FAILED_TRANSFER {
+            get {
+                return ResourceManager.GetString("FAILED_TRANSFER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O Saldo da conta é insuficiente.
         /// </summary>
         public static string INSUFFICIENT_BALANCE {

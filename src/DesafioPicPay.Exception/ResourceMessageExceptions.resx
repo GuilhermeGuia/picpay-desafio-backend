@@ -138,6 +138,9 @@
   <data name="EMAIL_UNIQUE" xml:space="preserve">
     <value>O email já está sendo utilizado</value>
   </data>
+  <data name="FAILED_TRANSFER" xml:space="preserve">
+    <value>Erro ao realizar a transferência</value>
+  </data>
   <data name="INSUFFICIENT_BALANCE" xml:space="preserve">
     <value>O Saldo da conta é insuficiente</value>
   </data>
