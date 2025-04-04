@@ -4,6 +4,7 @@ using DesafioPicPay.Infrastructure.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DesafioPicPay.Infrastructure.Migrations
 {
     [DbContext(typeof(DesafioPicPayDbContext))]
-    partial class DesafioPicPayDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250402215211_atualizandoEntidadeUsuario")]
+    partial class atualizandoEntidadeUsuario
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

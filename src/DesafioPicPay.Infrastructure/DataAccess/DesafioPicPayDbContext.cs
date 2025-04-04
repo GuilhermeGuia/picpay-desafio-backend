@@ -10,7 +10,6 @@ public class DesafioPicPayDbContext : DbContext
     #region DBSETS
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<Transfer> Transfer { get; set; }
-        public virtual DbSet<Account> Account { get; set; }
     #endregion
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
