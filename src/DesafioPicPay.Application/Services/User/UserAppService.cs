@@ -43,11 +43,8 @@ public class UserAppService : IUserAppService
     {
         _validator.CreateUserValidation(input);
 
-        if (await _userRepository.Find(x => x.Email == input.Email) != null)
-            throw new ErrorOnValidationException(ResourceMessageExceptions.EMAIL_UNIQUE);
-
-        if (await _userRepository.Find(x => x.Cpf == input.Cpf) != null)
-            throw new ErrorOnValidationException(ResourceMessageExceptions.CPF_UNIQUE);
+        if (await _userRepository.Find(x => x.Email == input.Email) != null || await _userRepository.Find(x => x.Cpf == input.Cpf) != null)
+            throw new AccountAlreadyExistsException();
 
         var user = _mapper.Map<Domain.Entities.User>(input);
 
