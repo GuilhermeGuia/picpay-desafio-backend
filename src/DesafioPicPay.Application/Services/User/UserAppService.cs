@@ -52,7 +52,7 @@ public class UserAppService : IUserAppService
 
         await _userRepository.Add(user);
 
-        await _unitOfWork.Commit();
+        await _unitOfWork.SaveChangesAsync();
 
         return new CreateUserOutput() { FullName = input.FullName };
     }
